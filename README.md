@@ -100,5 +100,5 @@ Este projeto demonstra a integração entre:
 
 ---
 
-**Desenvolvido para Feira Técnica 2024**  
-*Integração: Desenvolvimento de Sistemas + Mecatrônica*
+**Desenvolvido para Feira Técnica 2025**  
+*Integração: Desenvolvimento de Sistemas + Mecatrônica + Administração*
