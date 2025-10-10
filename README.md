@@ -12,6 +12,11 @@ E-commerce simples que integra com ESP32 via MQTT e envia confirmações por Wha
 
 ## 🚀 Como Executar
 
+### VERSÃO DO NODE
+```bash
+versão do node: v22.17.0
+```
+
 ### 1. Instalar Dependências
 ```bash
 npm install
