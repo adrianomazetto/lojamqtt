@@ -14,7 +14,7 @@ E-commerce simples que integra com ESP32 via MQTT e envia confirmações por Wha
 
 ### VERSÃO DO NODE
 ```bash
-versão do node: v22.17.0
+versão node: v22.17.0
 ```
 
 ### 1. Instalar Dependências
