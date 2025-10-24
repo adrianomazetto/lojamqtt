@@ -41,13 +41,27 @@ app.get('/api/produtos', (req, res) => {
 app.post('/api/pedido', (req, res) => {
     const { produto, cliente } = req.body;
     
+    // 1. Validação de entrada
     if (!produto || !cliente || !cliente.nome || !cliente.telefone) {
-        return res.status(400).json({ erro: 'Dados incompletos' });
+        return res.status(400).json({ erro: 'Dados incompletos. Verifique todos os campos.' });
     }
     
+    // 2. Sanitização e validação do nome
+    const nomeCliente = cliente.nome.trim();
+    if (nomeCliente.length < 3) {
+        return res.status(400).json({ erro: 'Nome inválido. Deve ter no mínimo 3 caracteres.' });
+    }
+
+    // 3. Validação do formato do telefone (padrão brasileiro)
+    const telefoneLimpo = cliente.telefone.replace(/\D/g, '');
+    if (!/^\d{10,11}$/.test(telefoneLimpo)) {
+        return res.status(400).json({ erro: 'Telefone inválido. Use o formato (XX) XXXXX-XXXX.' });
+    }
+
+    // 4. Verificação do produto
     const produtoInfo = produtos[produto];
     if (!produtoInfo) {
-        return res.status(404).json({ erro: 'Produto não encontrado' });
+        return res.status(404).json({ erro: 'Produto não encontrado.' });
     }
     
     const pedidoId = uuidv4().substring(0, 8);

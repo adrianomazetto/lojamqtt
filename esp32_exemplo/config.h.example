@@ -1,0 +1,9 @@
+// config.h.example
+#ifndef CONFIG_H
+#define CONFIG_H
+
+// Configurações WiFi
+const char* ssid = "SEU_WIFI";            // Substitua pelo seu WiFi
+const char* password = "SUA_SENHA";        // Substitua pela sua senha
+
+#endif
