@@ -8,10 +8,7 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
-
-// Configurações WiFi
-const char* ssid = "SEU_WIFI";            // Substitua pelo seu WiFi
-const char* password = "SUA_SENHA";        // Substitua pela sua senha
+#include "config.h"
 
 // Configurações MQTT
 const char* mqtt_server = "broker.hivemq.com";
